@@ -8,15 +8,10 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    max-width: 800px; /* Adjust the value based on your design */
+    max-width: 800px; /* Can adjust this for width of body */
     width: 100%;
     margin: auto;
-    height: 100vh; /* For portrait orientation */
-  
-    /* Media query for landscape orientation */
-    @media screen and (orientation: landscape) {
-      height: auto; /* Allow the height to adjust based on content */
-    }
+    height: auto;
   }
   
   
