@@ -1,18 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
-html {
-    background-color: #222;
-}
-body {
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+* {
+    padding: 0;
     margin: 0;
-    max-width: 800px; /* Can adjust this for width of body */
-    width: 100%;
-    margin: auto;
-    height: auto;
-  }
+    box-sizing: border-box;
+}
+
+/* html {
+    background-color: #222;
+} */
+
+body {
   
-  
-  
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  max-width: 800px; */
+  width: 100%;
+  margin: auto;
+  height: auto; 
+
+  /* background-color: aliceblue; */
+  background-color: bisque;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px;
+  background-color: #111;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  transition: height 0.5s ease;
+}
+
+header.expanded {
+  height: 100px;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#brand a {
+  color: green;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: white;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: red;
+  margin: 6px;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, 8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.mobile-menu {
+  display: flex; /* Change display to flex */
+  flex-direction: column;
+  position: absolute;
+  background-color: #333;
+  top: calc(-100vh + 50px); /* Position above the screen */
+  left: 0;
+  height: 75%;
+  width: 100%;
+  transition: transform 0.5s ease; /* Added transition for the transform property */
+  z-index: -5;
+}
+
+.open .mobile-menu {
+  transform: translateY(calc(100vh)); /* Translate down to show the menu */
+}
