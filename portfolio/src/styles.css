@@ -14,12 +14,10 @@ html {
 }
 body {
   margin: 0;
-  max-width: 800px; 
+  max-width: 1290px; 
   width: 100%;
   margin: auto;
   height: auto; 
-
-  /* background-color: aliceblue; */
   background-color: #333;
   color: #eee;
   font-family: Arial, Helvetica, sans-serif;
@@ -34,7 +32,7 @@ header a {
 header {
   padding: 0 20px;
   background-color: #111;
-  height: 50px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   transition: height 0.5s ease;
@@ -133,4 +131,9 @@ ul li:hover {
 
 .open .mobile-menu {
   transform: translateY(100vh); /* Translate down to show the menu */
+}
+
+
+img {
+  height: 75px;
 }
