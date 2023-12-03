@@ -32,7 +32,7 @@ header a {
 header {
   padding: 0 20px;
   background-color: #111;
-  height: 100px;
+  height: 130px;
   display: flex;
   justify-content: space-between;
   transition: height 0.5s ease;
@@ -68,9 +68,11 @@ ul a {
 }
 
 ul li {
-  padding: 5px;
+  padding: 15px;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 50px;
+  font-size: 25px;
+  height: 50px;
 }
 .mobile-menu li {
 
@@ -133,7 +135,6 @@ ul li:hover {
   transform: translateY(100vh); /* Translate down to show the menu */
 }
 
-
-img {
-  height: 75px;
+#logo {
+  height: 100px;
 }

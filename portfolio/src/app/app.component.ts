@@ -20,6 +20,19 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+
+    const now = new Date();
+    const seconds = now.getSeconds();
+    let angle = (seconds - 15) * 6;
+    let imgToRotate = document.getElementById("logo");
+
+    setInterval(() => {
+      if (imgToRotate) {
+        imgToRotate.style.transform = `rotate(${angle}deg)`;
+        angle += 1;
+      }
+    }, 1000/6);
+
   }
 
   @HostListener('window:resize', ['$event'])
