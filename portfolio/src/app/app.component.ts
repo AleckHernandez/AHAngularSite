@@ -10,7 +10,12 @@ export class AppComponent implements OnInit{
 
   public screenWidth: any;
   public screenHeight: any;
+  public maxScreenWidth: number = 600;
   public isMobileMenuOpen: boolean = false;
+
+  public header: any;
+  public menu: any;
+  
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
@@ -21,17 +26,26 @@ export class AppComponent implements OnInit{
   onResize() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+
+
+    if (this.screenWidth > this.maxScreenWidth) {
+      this.header = document.querySelector('header');
+      if (this.isMobileMenuOpen) {
+        this.isMobileMenuOpen = !this.isMobileMenuOpen
+        this.header.classList.remove('expanded');
+      }
+    }
   }
 
   toggleMobileMenu(event: any) {
-    const menu = event.currentTarget;
-    menu.classList.toggle('open');
+    this.menu = event.currentTarget;
+    this.menu.classList.toggle('open');
 
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
 
-    const header = document.querySelector('header');
-    if (header) {
-      header.classList.toggle('expanded', this.isMobileMenuOpen);
+    this.header = document.querySelector('header');
+    if (this.header) {
+      this.header.classList.toggle('expanded');
     }
   }
 }

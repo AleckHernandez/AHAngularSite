@@ -9,21 +9,22 @@
     background-color: #222;
 } */
 
+html {
+  background-color: beige;
+}
 body {
-  
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
-  max-width: 800px; */
+  max-width: 800px; 
   width: 100%;
   margin: auto;
   height: auto; 
 
   /* background-color: aliceblue; */
-  background-color: bisque;
-  color: #555;
+  background-color: #333;
+  color: #eee;
   font-family: Arial, Helvetica, sans-serif;
+  border-left: 5px solid #222;
+  border-right: 5px solid #222;
 }
 
 header a {
@@ -39,16 +40,18 @@ header {
   transition: height 0.5s ease;
 }
 
+
 header.expanded {
-  height: 100px;
+  height: 50vh;
 }
 
 #brand {
   font-weight: bold;
   font-size: 18px;
-  display: flex;
+  margin: 15px 0;
   align-items: center;
 }
+
 
 #brand a {
   color: green;
@@ -68,17 +71,30 @@ ul a {
 
 ul li {
   padding: 5px;
-  margin-left: 10px;;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.mobile-menu li {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  height: 7vh;
 }
 
 ul li:hover {
-  transform: scale(1.1);
+  background-color: #222;
+  border-radius: 4px;
+  transform: scale(1.2);
   transition: 0.3s;
 }
 
 #hamburger-icon {
-  margin: auto 0;
+  margin: 9px 0;
   cursor: pointer;
+  height:fit-content;
 }
 
 #hamburger-icon div {
@@ -107,15 +123,14 @@ ul li:hover {
   display: flex; /* Change display to flex */
   flex-direction: column;
   position: absolute;
-  background-color: #333;
   top: calc(-100vh + 50px); /* Position above the screen */
   left: 0;
-  height: 75%;
+  height: 40vh;
   width: 100%;
   transition: transform 0.5s ease; /* Added transition for the transform property */
-  z-index: -5;
+  z-index: 1;
 }
 
 .open .mobile-menu {
-  transform: translateY(calc(100vh)); /* Translate down to show the menu */
+  transform: translateY(100vh); /* Translate down to show the menu */
 }
