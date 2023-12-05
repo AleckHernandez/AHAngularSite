@@ -10,7 +10,7 @@ export class AppComponent implements OnInit{
 
   public screenWidth: any;
   public screenHeight: any;
-  public maxScreenWidth: number = 600;
+  public maxScreenWidth: number = 650;
   public isMobileMenuOpen: boolean = false;
 
   public header: any;
